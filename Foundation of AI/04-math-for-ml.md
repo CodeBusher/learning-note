@@ -37,3 +37,13 @@ The formula `β=(XᵀX)⁻¹Xᵀy` is mathematically valid when X has full colum
 - [Optimization](https://inst.eecs.berkeley.edu/~cs188/textbook/ml/optimization.html)
 
 *CS188 provides additional or alternative explanations; the course lecture material remains the primary source.*
+
+## Sources and references
+
+**Primary:** Prof. Nadim Saad, *CS 5100 — Foundations of Artificial Intelligence*, Northeastern University, Silicon Valley Campus. Based on student-provided lecture notes (Lectures 1–12); these are independent study summaries, not official course publications.
+
+**Supplementary:** [UC Berkeley CS188 Online Textbook](https://inst.eecs.berkeley.edu/~cs188/textbook/).
+- [CS188: linear regression](https://inst.eecs.berkeley.edu/~cs188/textbook/ml/linear-regression.html)
+- [CS188: optimization](https://inst.eecs.berkeley.edu/~cs188/textbook/ml/optimization.html)
+
+CS188 material is supplementary and is not attributed to the Northeastern course.
