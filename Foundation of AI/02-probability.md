@@ -46,3 +46,13 @@ Compare to a fully unrestricted joint distribution, which needs `k1*k2*k3-1`.
 - [Structure of Bayes Nets](https://inst.eecs.berkeley.edu/~cs188/textbook/bayes-nets/structure.html)
 
 *CS188 provides additional or alternative explanations; the course lecture material remains the primary source.*
+
+## Sources and references
+
+**Primary:** Prof. Nadim Saad, *CS 5100 — Foundations of Artificial Intelligence*, Northeastern University, Silicon Valley Campus. Based on student-provided lecture notes (Lectures 1–12); these are independent study summaries, not official course publications.
+
+**Supplementary:** [UC Berkeley CS188 Online Textbook](https://inst.eecs.berkeley.edu/~cs188/textbook/).
+- [CS188: probability](https://inst.eecs.berkeley.edu/~cs188/textbook/bayes-nets/probability.html)
+- [CS188: representation](https://inst.eecs.berkeley.edu/~cs188/textbook/bayes-nets/representation.html)
+
+CS188 material is supplementary and is not attributed to the Northeastern course.
