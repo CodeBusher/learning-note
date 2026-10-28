@@ -135,6 +135,21 @@ A good heuristic should be cheap to calculate, informative, and provably non-ove
 
 *CS188 provides additional or alternative explanations; the course lecture material remains the primary source.*
 
+## Deeper explanation: designing and evaluating heuristics
+
+**Relax the problem to construct a lower bound.** Suppose a robot moves on a rectangular grid, one unit north/south/east/west per step, but there are walls. Ignore the walls. From (1,2) to (4,6), the relaxed problem needs |4-1|+|6-2|=7 moves. Walls cannot make the real optimal route *shorter*, so Manhattan distance is an admissible heuristic for this movement model.
+
+**Why is it consistent?** A single legal unit step changes Manhattan distance by at most one. Thus h(n)-h(n')≤1=c(n,n'), or h(n)≤c(n,n')+h(n'). The triangle inequality is the mathematical reason, not just a visual analogy.
+
+**Dominance.** If both heuristics are admissible and h₂(n)≥h₁(n) at every node, h₂ is more informed; under standard tree-search assumptions A* with h₂ need not explore as many low-f nodes. It may cost more time to compute, so stronger is not automatically faster overall.
+
+**Greedy best-first vs A*.** Greedy uses priority h(n) only; A* uses g(n)+h(n). A low h does not imply a cheap complete route if reaching that node already cost a lot.
+
+**Worked choice:** S→A costs 2, A→G costs 2, S→B costs 1, B→G costs 5. Let h(A)=2, h(B)=5, h(G)=0, h(S)=4. After expanding S, A has f=2+2=4 while B has f=1+5=6; A* expands A and finds the path costing 4. Greedy also chooses A in this case, but that is not a general optimality guarantee.
+
+**Challenge:** If diagonal movement becomes legal at unit cost, Manhattan distance from (0,0) to (1,1) equals 2 although the true shortest path costs 1. It is now inadmissible. Revisit heuristic construction whenever actions or costs change.
+
+
 ## Sources and references
 
 **Primary:** Prof. Nadim Saad, *CS 5100 — Foundations of Artificial Intelligence*, Northeastern University, Silicon Valley Campus. Based on student-provided lecture notes (Lectures 1–12); these are independent study summaries, not official course publications.
