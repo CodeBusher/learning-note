@@ -1,5 +1,7 @@
 # Search
 
+*CS 5100 · Lectures 1–2 · Prof. Nadim Saad · Northeastern University (Silicon Valley)*
+
 *CS 5100 · Lectures 1–2*
 
 ## Search problem fundamentals
@@ -121,3 +123,14 @@ A good heuristic should be cheap to calculate, informative, and provably non-ove
 5. Explain why admissibility alone may be insufficient for graph A* that never reopens closed nodes.
 
 *Based on Lecture 1 search comparisons and Lecture 2 A*, heuristic-consistency diagrams, and the multi-car heuristic exercise; numeric graph in this chapter is an additional worked teaching example.*
+
+## References
+
+**Primary:** Prof. Nadim Saad, *CS 5100 — Foundations of Artificial Intelligence*, Northeastern University, Silicon Valley Campus, Lectures 1–2 (student-provided lecture notes).
+
+**Supplementary:** UC Berkeley [CS188 Online Textbook](https://inst.eecs.berkeley.edu/~cs188/textbook/):
+- [State Spaces and Search Problems](https://inst.eecs.berkeley.edu/~cs188/textbook/search/state.html)
+- [Uninformed Search](https://inst.eecs.berkeley.edu/~cs188/textbook/search/uninformed.html)
+- [Informed Search (A*)](https://inst.eecs.berkeley.edu/~cs188/textbook/search/informed.html)
+
+*CS188 provides additional or alternative explanations; the course lecture material remains the primary source.*
