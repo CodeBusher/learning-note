@@ -21,3 +21,11 @@ Try every exercise without reading the module proof first.
 - Four binary chain independent parameter count: 1+2+2+2=7 vs unrestricted 15.
 - Target score 3 coin game: U(0)=5/8.
 - Scalar quadratic descent converges from any x0 for 0<α<1.
+
+## Sources and references
+
+**Primary:** Prof. Nadim Saad, *CS 5100 — Foundations of Artificial Intelligence*, Northeastern University, Silicon Valley Campus. Based on student-provided lecture notes (Lectures 1–12); these are independent study summaries, not official course publications.
+
+**Supplementary:** [UC Berkeley CS188 Online Textbook](https://inst.eecs.berkeley.edu/~cs188/textbook/).
+
+CS188 material is supplementary and is not attributed to the Northeastern course.
