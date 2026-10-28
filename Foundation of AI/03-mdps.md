@@ -40,3 +40,13 @@ Thus U(2)=1/2, U(1)=3/4, U(0)=5/8.
 - [Value Iteration](https://inst.eecs.berkeley.edu/~cs188/textbook/mdp/value-iteration.html)
 
 *CS188 provides additional or alternative explanations; the course lecture material remains the primary source.*
+
+## Sources and references
+
+**Primary:** Prof. Nadim Saad, *CS 5100 — Foundations of Artificial Intelligence*, Northeastern University, Silicon Valley Campus. Based on student-provided lecture notes (Lectures 1–12); these are independent study summaries, not official course publications.
+
+**Supplementary:** [UC Berkeley CS188 Online Textbook](https://inst.eecs.berkeley.edu/~cs188/textbook/).
+- [CS188: markov decision processes](https://inst.eecs.berkeley.edu/~cs188/textbook/mdp/markov-decision-processes.html)
+- [CS188: value iteration](https://inst.eecs.berkeley.edu/~cs188/textbook/mdp/value-iteration.html)
+
+CS188 material is supplementary and is not attributed to the Northeastern course.
