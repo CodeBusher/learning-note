@@ -37,3 +37,11 @@ Textbook by Nikhil Sharma, Josh Hug, Jacky Liang, and Henry Zhu, with additional
 **Source distinction:** Berkeley may organize topics differently from CS5100 or add material not covered in these lectures; any added explanations should be clearly marked as *CS188 extension* rather than attributed to Prof. Saad.
 
 *These are independently prepared learning notes, not official Northeastern or Berkeley materials.*
+
+## Sources and references
+
+**Primary:** Prof. Nadim Saad, *CS 5100 — Foundations of Artificial Intelligence*, Northeastern University, Silicon Valley Campus. Based on student-provided lecture notes (Lectures 1–12); these are independent study summaries, not official course publications.
+
+**Supplementary:** [UC Berkeley CS188 Online Textbook](https://inst.eecs.berkeley.edu/~cs188/textbook/).
+
+CS188 material is supplementary and is not attributed to the Northeastern course.
