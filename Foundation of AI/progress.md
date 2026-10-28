@@ -18,3 +18,11 @@ A box is checked only when you can explain the idea without notes and solve a fr
 | Date | Lecture | Concepts mastered | Errors / questions to revisit |
 |---|---|---|---|
 | | | | |
+
+## Sources and references
+
+**Primary:** Prof. Nadim Saad, *CS 5100 — Foundations of Artificial Intelligence*, Northeastern University, Silicon Valley Campus. Based on student-provided lecture notes (Lectures 1–12); these are independent study summaries, not official course publications.
+
+**Supplementary:** [UC Berkeley CS188 Online Textbook](https://inst.eecs.berkeley.edu/~cs188/textbook/).
+
+CS188 material is supplementary and is not attributed to the Northeastern course.
