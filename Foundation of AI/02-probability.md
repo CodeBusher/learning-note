@@ -47,6 +47,25 @@ Compare to a fully unrestricted joint distribution, which needs `k1*k2*k3-1`.
 
 *CS188 provides additional or alternative explanations; the course lecture material remains the primary source.*
 
+## Worked conditional-dependence reasoning
+
+Start with the unrestricted probability chain rule:
+`P(A,B,C)=P(A)P(B|A)P(C|A,B)`.
+
+For the directed chain A→B→C, the **graph model** assumes `C ⟂ A | B`: once B is observed, A supplies no further information about C. This justifies replacing the last factor with `P(C|B)`. The chain rule itself does not justify that replacement.
+
+**Three graph patterns (supplementary extension):**
+- **Chain** A→B→C: observing B blocks the A–C path.
+- **Fork** A←B→C: observing the common cause B blocks the A–C path.
+- **Collider** A→B←C: with B unobserved, the path is blocked; observing B (or some descendants of B) may open the path and make A and C dependent.
+
+For example, two independent causes of an alarm may become statistically dependent after learning the alarm sounded: evidence for one cause can lower the inferred probability of the other. This is sometimes called *explaining away*.
+
+**Parameter counting example.** Four binary variables in chain A→B→C→D require: P(A):1, P(B|A):2, P(C|B):2, P(D|C):2, totaling 7 independent numbers. An arbitrary joint table for four binary variables needs 2^4-1=15.
+
+**Check yourself:** Does `A ⟂ C` necessarily follow from A→B→C? No: it is *conditional* independence given B; without B the endpoints are generally dependent.
+
+
 ## Sources and references
 
 **Primary:** Prof. Nadim Saad, *CS 5100 — Foundations of Artificial Intelligence*, Northeastern University, Silicon Valley Campus. Based on student-provided lecture notes (Lectures 1–12); these are independent study summaries, not official course publications.
