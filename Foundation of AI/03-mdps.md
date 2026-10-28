@@ -1,4 +1,6 @@
-# Lectures 5–7 — Markov Decision Processes
+# Markov Decision Processes
+
+*CS 5100 · Lectures 5–7 · Prof. Nadim Saad · Northeastern University (Silicon Valley)*
 
 ## Decisions under uncertainty
 Lecture grid-world has +1 / -1 terminal rewards, step reward -0.04, and noisy actions: moving in the chosen direction with probability 0.8 and sideways with 0.1 each.
@@ -28,3 +30,13 @@ Fair coin: heads +2, tails +1. Win if score equals 3, lose if over 3.
 Thus U(2)=1/2, U(1)=3/4, U(0)=5/8.
 
 **Practice:** Derive the grid Bellman equation for a move against a wall; calculate the coin-toss winning probability for target 4.
+
+## References
+
+**Primary:** Prof. Nadim Saad, *CS 5100 — Foundations of Artificial Intelligence*, Northeastern University, Silicon Valley Campus, Lectures 5–7 (student-provided lecture notes).
+
+**Supplementary:** UC Berkeley [CS188 Online Textbook](https://inst.eecs.berkeley.edu/~cs188/textbook/):
+- [Markov Decision Processes](https://inst.eecs.berkeley.edu/~cs188/textbook/mdp/markov-decision-processes.html)
+- [Value Iteration](https://inst.eecs.berkeley.edu/~cs188/textbook/mdp/value-iteration.html)
+
+*CS188 provides additional or alternative explanations; the course lecture material remains the primary source.*
