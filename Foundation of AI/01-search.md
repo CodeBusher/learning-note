@@ -134,3 +134,14 @@ A good heuristic should be cheap to calculate, informative, and provably non-ove
 - [Informed Search (A*)](https://inst.eecs.berkeley.edu/~cs188/textbook/search/informed.html)
 
 *CS188 provides additional or alternative explanations; the course lecture material remains the primary source.*
+
+## Sources and references
+
+**Primary:** Prof. Nadim Saad, *CS 5100 — Foundations of Artificial Intelligence*, Northeastern University, Silicon Valley Campus. Based on student-provided lecture notes (Lectures 1–12); these are independent study summaries, not official course publications.
+
+**Supplementary:** [UC Berkeley CS188 Online Textbook](https://inst.eecs.berkeley.edu/~cs188/textbook/).
+- [CS188: state](https://inst.eecs.berkeley.edu/~cs188/textbook/search/state.html)
+- [CS188: uninformed](https://inst.eecs.berkeley.edu/~cs188/textbook/search/uninformed.html)
+- [CS188: informed](https://inst.eecs.berkeley.edu/~cs188/textbook/search/informed.html)
+
+CS188 material is supplementary and is not attributed to the Northeastern course.
