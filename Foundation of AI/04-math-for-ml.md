@@ -1,4 +1,6 @@
-# Lectures 7–9 — Linear Algebra, Derivatives & Least Squares
+# Linear Algebra and Optimization
+
+*CS 5100 · Lectures 7–9 · Prof. Nadim Saad · Northeastern University (Silicon Valley)*
 
 ## Vector fundamentals
 `||v||1=Σ|vi|`, `||v||2=sqrt(Σvi²)`, `||v||∞=max|vi|`.
@@ -25,3 +27,13 @@ If X has full column rank, Xv≠0 for all v≠0, making XᵀX positive definite;
 The formula `β=(XᵀX)⁻¹Xᵀy` is mathematically valid when X has full column rank, but QR/SVD solvers are usually numerically preferable to explicit inversion.
 
 **Practice:** Derive the gradient from coordinate sums and matrix expansion; prove full column rank implies unique least-squares minimizer; give a rank-deficient example and a flat parameter direction.
+
+## References
+
+**Primary:** Prof. Nadim Saad, *CS 5100 — Foundations of Artificial Intelligence*, Northeastern University, Silicon Valley Campus, Lectures 7–9 (student-provided lecture notes).
+
+**Supplementary:** UC Berkeley [CS188 Online Textbook](https://inst.eecs.berkeley.edu/~cs188/textbook/):
+- [Linear Regression](https://inst.eecs.berkeley.edu/~cs188/textbook/ml/linear-regression.html)
+- [Optimization](https://inst.eecs.berkeley.edu/~cs188/textbook/ml/optimization.html)
+
+*CS188 provides additional or alternative explanations; the course lecture material remains the primary source.*
