@@ -1,4 +1,6 @@
-# Lectures 3–4 — Probability & Bayesian Networks
+# Probability and Bayesian Networks
+
+*CS 5100 · Lectures 3–4 · Prof. Nadim Saad · Northeastern University (Silicon Valley)*
 
 ## Foundations
 `P(A∪B)=P(A)+P(B)-P(A∩B)`.
@@ -33,3 +35,14 @@ For a 3-node chain with domain sizes k1,k2,k3:
 Compare to a fully unrestricted joint distribution, which needs `k1*k2*k3-1`.
 
 **Practice:** Explain why X3|X1,X2 simplifies to X3|X2 only with conditional independence; count parameters for four binary variables in a chain.
+
+## References
+
+**Primary:** Prof. Nadim Saad, *CS 5100 — Foundations of Artificial Intelligence*, Northeastern University, Silicon Valley Campus, Lectures 3–4 (student-provided lecture notes).
+
+**Supplementary:** UC Berkeley [CS188 Online Textbook](https://inst.eecs.berkeley.edu/~cs188/textbook/):
+- [Probability Rundown](https://inst.eecs.berkeley.edu/~cs188/textbook/bayes-nets/probability.html)
+- [Bayesian Network Representation](https://inst.eecs.berkeley.edu/~cs188/textbook/bayes-nets/representation.html)
+- [Structure of Bayes Nets](https://inst.eecs.berkeley.edu/~cs188/textbook/bayes-nets/structure.html)
+
+*CS188 provides additional or alternative explanations; the course lecture material remains the primary source.*
