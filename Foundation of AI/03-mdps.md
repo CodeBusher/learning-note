@@ -41,6 +41,25 @@ Thus U(2)=1/2, U(1)=3/4, U(0)=5/8.
 
 *CS188 provides additional or alternative explanations; the course lecture material remains the primary source.*
 
+## Deriving value iteration from the Bellman principle
+
+Take a state s and choose action a. We receive immediate reward R(s,a,s') and then continue from the random successor s'. The expected return for that action, given current utility estimate U, is
+`Q_U(s,a)=Σ_{s'}P(s'|s,a)[R(s,a,s')+γU(s')]`.
+The **Bellman operator** takes the best action:
+`(TU)(s)=max_a Q_U(s,a)`.
+Repeatedly applying T gives `U_{k+1}=TU_k`. For γ=1 and appropriate finite-horizon/terminating models this matches the lecture update; γ<1 is the standard discounted case.
+
+**Why the discounted iteration converges.** For any two utility vectors U,V and any action, the weighted difference in successor utilities is at most `γ||U-V||∞`. The max over actions cannot increase that bound; hence
+`||TU-TV||∞ ≤ γ||U-V||∞`.
+When 0≤γ<1, each update shrinks the distance between competing estimates by a uniform factor. The fixed point is unique.
+
+**Concrete action comparison.** A move North reaches states with utilities 0.9,0.2,0.5 with probabilities 0.8,0.1,0.1 and gives fixed immediate reward -0.04. With γ=1, its estimated return is `-0.04+0.8(0.9)+0.1(0.2)+0.1(0.5)=0.75`. Repeat for East, South and West, then choose the maximum.
+
+**Policy evaluation versus improvement.** Evaluation holds the action choice fixed and solves for its utilities; improvement switches to actions maximizing expected return according to those utilities. Repeating these two phases is **policy iteration** (supplementary extension), distinct from applying the max update to every state in value iteration.
+
+**Important boundary issue.** Negative reward cycles can yield undefined infinite undiscounted return. A tiny change `||U_{k+1}-U_k||∞` is a stopping heuristic, not proof of validity in an arbitrary undiscounted model.
+
+
 ## Sources and references
 
 **Primary:** Prof. Nadim Saad, *CS 5100 — Foundations of Artificial Intelligence*, Northeastern University, Silicon Valley Campus. Based on student-provided lecture notes (Lectures 1–12); these are independent study summaries, not official course publications.
