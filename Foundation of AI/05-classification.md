@@ -1,4 +1,6 @@
-# Lectures 10–12 — Polynomial Regression, Classification & Optimization
+# Machine Learning and Classification
+
+*CS 5100 · Lectures 10–12 · Prof. Nadim Saad · Northeastern University (Silicon Valley)*
 
 ## Polynomial regression
 `yhat=β0+β1*x+β2*x²+⋯+βd*x^d = φ(x)ᵀβ`, with `φ(x)=[1,x,…,x^d]ᵀ`.
@@ -29,3 +31,15 @@ Equivalently, gradient descent minimizes negative log-likelihood using minus its
 Lecture 11 example: for f(x)=x², x0=-2 and α=1, descent oscillates between -2 and 2. With α=0.1, updates converge toward zero.
 
 **Practice:** Derive sigmoid derivative, likelihood and logistic gradient from first principles; prove the scalar quadratic descent stability condition `0<α<1`.
+
+## References
+
+**Primary:** Prof. Nadim Saad, *CS 5100 — Foundations of Artificial Intelligence*, Northeastern University, Silicon Valley Campus, Lectures 10–12 (student-provided lecture notes).
+
+**Supplementary:** UC Berkeley [CS188 Online Textbook](https://inst.eecs.berkeley.edu/~cs188/textbook/):
+- [Machine Learning](https://inst.eecs.berkeley.edu/~cs188/textbook/ml.html)
+- [Linear Regression](https://inst.eecs.berkeley.edu/~cs188/textbook/ml/linear-regression.html)
+- [Optimization](https://inst.eecs.berkeley.edu/~cs188/textbook/ml/optimization.html)
+- [Logistic Regression](https://inst.eecs.berkeley.edu/~cs188/textbook/ml/logistic.html)
+
+*CS188 provides additional or alternative explanations; the course lecture material remains the primary source.*
