@@ -44,6 +44,31 @@ Lecture 11 example: for f(x)=x², x0=-2 and α=1, descent oscillates between -2 
 
 *CS188 provides additional or alternative explanations; the course lecture material remains the primary source.*
 
+## Detailed logistic regression derivation
+
+Let `zᵢ=βᵀxᵢ`, `pᵢ=σ(zᵢ)=1/(1+e^{-zᵢ})`, and binary label `yᵢ∈{0,1}`. Under independent conditional Bernoulli observations,
+`L(β)=∏ pᵢ^{yᵢ}(1-pᵢ)^{1-yᵢ}`.
+
+Because the logarithm is strictly increasing, maximizing L is equivalent to maximizing
+`ℓ(β)=Σ[yᵢ log pᵢ+(1-yᵢ)log(1-pᵢ)]`.
+Turning products into sums also avoids multiplying many tiny probabilities.
+
+Use `∇β pᵢ=pᵢ(1-pᵢ)xᵢ` from the sigmoid derivative and chain rule. Thus
+`∇β log pᵢ=(1-pᵢ)xᵢ`
+and
+`∇β log(1-pᵢ)=-pᵢxᵢ`.
+Combining terms:
+`∇βℓ=Σ[yᵢ(1-pᵢ)-(1-yᵢ)pᵢ]xᵢ=Σ(yᵢ-pᵢ)xᵢ=Xᵀ(y-p)`.
+
+**One-sample intuition:** If a positive example has label y=1 but predicted probability p=0.2, the gradient contribution is `0.8x` and ascent pushes the score upward along x. If label y=0 and p=0.8, the contribution is `-0.8x` and ascent pushes the score downward.
+
+**Relationship to loss functions.** Binary cross-entropy is the *negative* log-likelihood. Minimizing cross-entropy by gradient **descent** and maximizing log-likelihood by gradient **ascent** lead to equivalent parameter updates.
+
+**Curvature (supplementary extension):** For this model, `∇²ℓ=-XᵀWX`, with diagonal `Wᵢᵢ=pᵢ(1-pᵢ)≥0`. So ℓ is concave. In perfectly separable unregularized data, however, the finite maximum-likelihood parameter vector may not exist.
+
+**Practice:** Differentiate the Bernoulli log-likelihood on paper, then verify the sign of the update when y=0,p=0.9 and x>0.
+
+
 ## Sources and references
 
 **Primary:** Prof. Nadim Saad, *CS 5100 — Foundations of Artificial Intelligence*, Northeastern University, Silicon Valley Campus. Based on student-provided lecture notes (Lectures 1–12); these are independent study summaries, not official course publications.
