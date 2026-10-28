@@ -38,6 +38,23 @@ The formula `β=(XᵀX)⁻¹Xᵀy` is mathematically valid when X has full colum
 
 *CS188 provides additional or alternative explanations; the course lecture material remains the primary source.*
 
+## Deep derivation: geometry and numerical stability of least squares
+
+**Geometric interpretation.** The prediction `Xβ` lies in the column space of X. The least-squares solution is the point in that space closest to y. Its residual `r=y-Xβ` must be perpendicular to each column of X:
+`Xᵀr=0`.
+Rearrange to obtain `XᵀXβ=Xᵀy` without calculus. The matrix-gradient derivation reaches the same condition.
+
+**Strict convexity needs independent columns.** For every v,
+`vᵀXᵀXv=||Xv||₂²≥0`.
+If columns are dependent, some nonzero v has Xv=0; moving β along v leaves Xβ unchanged and gives a flat loss direction. If X has full column rank, only v=0 maps to zero, so `XᵀX` is positive definite and the least-squares minimizer is unique.
+
+**Small example of nonuniqueness.** If X has two identical columns `[1,2]ᵀ` and `[1,2]ᵀ`, the prediction depends only on `β₁+β₂`. Many parameter pairs give identical fitted values.
+
+**Why not explicitly invert?** Forming XᵀX can square the spectral condition number, worsening numerical sensitivity. A reduced QR factorization `X=QR` solves `Rβ=Qᵀy`; SVD reveals small singular values and handles rank deficiency via a pseudoinverse. The inverse formula is a *mathematical identity*, not a recommended computation recipe.
+
+**Exercise:** For `X=[[1,1],[2,2]]`, calculate XᵀX, exhibit v≠0 with Xv=0, and show the loss stays constant along β+t v.
+
+
 ## Sources and references
 
 **Primary:** Prof. Nadim Saad, *CS 5100 — Foundations of Artificial Intelligence*, Northeastern University, Silicon Valley Campus. Based on student-provided lecture notes (Lectures 1–12); these are independent study summaries, not official course publications.
